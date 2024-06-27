@@ -1,0 +1,15 @@
+{
+  "builds":[{"src": "/api/*.php", "use": "vercel-php@0.7.1"},
+            {"src": "/api/*.go", "use": "@vercel/go"},
+            {"src": "**/*.ico", "use": "@vercel/static"},
+            {"src": "**/*.gif", "use": "@vercel/static"},
+            {"src": "**/*.js", "use": "@vercel/static"},
+            {"src": "**/*.png", "use": "@vercel/static"},
+            {"src": "**/*.jpg", "use": "@vercel/static"},
+            {"src": "**/*.sh", "use": "@vercel/static"},
+            {"src": "**/*.py", "use": "@vercel/static"},
+            {"src": "**/*.txt", "use": "@vercel/static"}
+           ],
+  "routes":[{"src":"/(.*)", "dest": "/api/$1"}
+           ]
+}
